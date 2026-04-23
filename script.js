@@ -1,9 +1,9 @@
 const videoList = [
-    '1.mp4',
-    '2.mp4',
-    '3.mp4',
-    '4.mp4',
-    '5.mp4'
+    'img/1.mp4',
+    'img/2.mp4',
+    'img/3.mp4',
+    'img/4.mp4',
+    'img/5.mp4'
 ];
 
 const currentPlaying = { 'left-container': '', 'right-container': '' };
