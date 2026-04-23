@@ -1,0 +1,240 @@
+/* Базовые настройки */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Первый экран */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.center-content {
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Панели с видео */
+.side-rect {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 600px;
+    background-color: #111;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.left-rect { left: 10%; }
+.right-rect { right: 10%; }
+
+.video-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.video-layer.active { opacity: 1; }
+
+/* Текст и Лого */
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.main-img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Тот самый фикс надписи Scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px; /* Отступ от низа экрана */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
+    animation: fadeIn 5s ease-in-out;
+}
+
+/* Секция цен */
+.pricing-section {
+    padding: 150px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.pricing-card {
+    border: 1px solid #222;
+    padding: 50px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #0a0a0a, #111);
+    max-width: 500px;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.price { color: #888; margin-bottom: 20px; }
+.sub-text { color: #444; margin-top: 20px; font-size: 0.9rem; }
+
+/* Футер */
+.site-footer {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.contact-info {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info:hover {
+    color: #fff;
+}
+
+/* К твоим базовым настройкам добавляем: */
+
+html, body {
+    margin: 0; padding: 0; width: 100%; min-height: 100%;
+    background-color: #000; color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Первый экран остается без изменений... */
+.hero-section {
+    position: relative; width: 100%; height: 100vh;
+    display: flex; justify-content: center; align-items: center; overflow: hidden;
+}
+
+/* Секция описания */
+.about-section {
+    padding: 100px 20px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+.feature h4 {
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.feature p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Секция цен */
+.pricing-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+    border: 1px solid #222;
+    padding: 50px;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #0a0a0a, #111);
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Футер */
+.site-footer {
+    padding: 60px 20px;
+    border-top: 1px solid #111;
+    text-align: center;
+}
+
+.legal-box {
+    font-size: 0.7rem;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.contact-info {
+    font-size: 0.8rem;
+    color: #444;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.contact-info:hover { color: #fff; }
+
+/* Твои анимации... */
+@keyframes fadeIn {
+    0% { opacity: 0; filter: blur(10px); }
+    100% { opacity: 1; filter: blur(0); }
+}
+
+/* Копируй остальные стили для side-rect, h1 и т.д. из предыдущего сообщения */
+
+@keyframes fadeIn {
+    0% { opacity: 0; filter: blur(10px); }
+    100% { opacity: 1; filter: blur(0); }
+}
