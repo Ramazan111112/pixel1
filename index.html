@@ -1,71 +1,254 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixera | Real-time Pixel Art Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- HERO -->
     <header class="main-header">
+        <nav class="top-nav">
+            <span class="nav-logo">PIXERA</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="mailto:ramazanzhov@gmail.com">Contact</a>
+            </div>
+        </nav>
         <div class="center-content">
-            <img src="img/pixelProject456.png" alt="Pixera Logo" class="main-img">
+            <div class="logo-wrap">
+                <img src="img/pixelProject456.png" alt="Pixera Logo" class="main-img">
+                <div class="logo-glow"></div>
+            </div>
             <h1>Pixera</h1>
+            <p class="hero-tagline">Real-time Pixel Art Engine</p>
         </div>
-        <div class="scroll-indicator">Scroll to explore</div>
+        <a href="#video-section" class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                <path d="M8 1v18M1 13l7 7 7-7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+        </a>
     </header>
 
-    <div class="hero-section">
+    <!-- VIDEO SECTION -->
+    <div class="hero-section" id="video-section">
+        <div class="video-label left-label">
+            <span>LIVE RENDER</span>
+        </div>
         <div class="side-rect left-rect" id="left-container">
             <video id="v1-left" class="video-layer active" autoplay muted playsinline></video>
             <video id="v2-left" class="video-layer" autoplay muted playsinline></video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="center-divider">
+            <div class="divider-line"></div>
+            <div class="divider-dot"></div>
+            <div class="divider-line"></div>
         </div>
 
         <div class="side-rect right-rect" id="right-container">
             <video id="v1-right" class="video-layer active" autoplay muted playsinline></video>
             <video id="v2-right" class="video-layer" autoplay muted playsinline></video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="video-label right-label">
+            <span>PIXEL MODE</span>
         </div>
     </div>
 
-    <section class="about-section">
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
         <div class="about-container">
-            <h2 class="section-title">Professional Pixel Art Camera</h2>
+            <div class="section-tag">— About the App</div>
+            <h2 class="section-title">Professional<br>Pixel Art Camera</h2>
             <p class="about-text">
-                Pixera — это камера с живым ретро-рендерингом, позволяющая менять пикселизацию и палитры прямо во время записи видео без монтажа, превращающая реальность в процедурный пиксель-арт.
+                Pixera is a live retro-rendering camera that lets you adjust pixelation and color palettes in real time — while recording — with no editing required. It transforms reality into procedural pixel art, instantly.
             </p>
             <div class="features-grid">
                 <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                        </svg>
+                    </div>
                     <h4>Real-time Control</h4>
-                    <p>Меняйте плотность пикселей и глубину дизеринга прямо во время записи.</p>
+                    <p>Adjust pixel density and dithering depth live, while you record.</p>
                 </div>
                 <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
                     <h4>No Post-Production</h4>
-                    <p>Уникальные визуальные переходы создаются мгновенно за счет мощности GPU.</p>
+                    <p>Visual transitions happen instantly, powered by the GPU — no editing needed.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="5" height="5" rx="1"/>
+                            <rect x="10" y="3" width="5" height="5" rx="1"/>
+                            <rect x="16" y="3" width="5" height="5" rx="1"/>
+                            <rect x="3" y="10" width="5" height="5" rx="1"/>
+                            <rect x="16" y="10" width="5" height="5" rx="1"/>
+                            <rect x="3" y="16" width="5" height="5" rx="1"/>
+                            <rect x="10" y="16" width="5" height="5" rx="1"/>
+                            <rect x="16" y="16" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <h4>Pixel Palettes</h4>
+                    <p>Dozens of built-in palettes — from 8-bit Nintendo to modern lo-fi aesthetics.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                            <path d="M15 9H9v6h6V9z"/>
+                        </svg>
+                    </div>
+                    <h4>Export Ready</h4>
+                    <p>Save videos and photos directly to your camera roll in the format you need.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pricing-section">
+    <!-- PRICING -->
+    <section class="pricing-section" id="pricing">
         <div class="pricing-container">
-            <h2 class="section-title">Pricing & Access</h2>
-            <div class="pricing-card">
-                <h3>Get Started</h3>
-                <p class="price">Flexible Options</p>
-                <p class="description">Access to all features is managed directly within the application.</p>
-                <p class="sub-text">Download the app to unlock the full power of live pixel manipulation.</p>
+            <div class="section-tag">— Pricing & Access</div>
+            <h2 class="section-title">What's Included</h2>
+            <p class="pricing-intro">Pixera is free to download. Unlock the full creative toolkit with Pro — managed inside the app.</p>
+
+            <div class="pricing-grid pricing-grid--two">
+
+                <!-- FREE -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <span class="plan-badge">Free</span>
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/ forever</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Basic pixelation
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            3 color palettes
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Video recording up to 30 sec
+                        </li>
+                        <li class="disabled">
+                            <svg class="cross" viewBox="0 0 16 16"><path d="M5 5l6 6M11 5l-6 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Advanced effects
+                        </li>
+                        <li class="disabled">
+                            <svg class="cross" viewBox="0 0 16 16"><path d="M5 5l6 6M11 5l-6 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Watermark-free export
+                        </li>
+                    </ul>
+                    <a href="#" class="plan-btn secondary">Download Free</a>
+                </div>
+
+                <!-- PRO -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <span class="plan-badge pro">Pro</span>
+                        <h3 class="plan-name">Creative</h3>
+                        <div class="plan-price">
+                            <span class="price-amount">$7</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Unlimited video recording
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            All palettes &amp; visual effects
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Custom palette creator
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Advanced audio &amp; video processing
+                        </li>
+                        <li>
+                            <svg class="check" viewBox="0 0 16 16"><path d="M3 8l4 4 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                            Watermark-free export
+                        </li>
+                    </ul>
+                    <a href="#" class="plan-btn primary">Get Pro Access</a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="legal-box">
-            <p>Уруджов Рамазан Энверович</p>
-            <p>ИНН: 054704261706</p>
+    <!-- INSTAGRAM CTA -->
+    <section class="instagram-section">
+        <div class="ig-container">
+            <div class="ig-text">
+                <p class="ig-label">Follow the journey</p>
+                <h3>See Pixera in action</h3>
+                <p class="ig-sub">Examples, updates and pixel art content on our Instagram</p>
+            </div>
+            <a href="https://www.instagram.com/pixera_pixel/" target="_blank" rel="noopener" class="ig-btn">
+                <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+                @pixera_pixel
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </a>
         </div>
-        <div class="footer-links">
-            <a href="mailto:ramazanzhov@gmail.com" class="contact-info">ramazanzhov@gmail.com</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">PIXERA</span>
+                <p class="footer-desc">Real-time Pixel Art Engine</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:ramazanzhov@gmail.com" class="contact-info">ramazanzhov@gmail.com</a>
+                <a href="https://www.instagram.com/pixera_pixel/" target="_blank" rel="noopener" class="contact-info ig-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                    </svg>
+                    @pixera_pixel
+                </a>
+            </div>
+            <div class="legal-box">
+                <p>Уруджов Рамазан Энверович</p>
+                <p>ИНН: 054704261706</p>
+            </div>
         </div>
     </footer>
 
